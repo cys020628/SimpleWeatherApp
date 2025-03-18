@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.weather.simpleweatherapp.presentation.ui.home.HomeScreen
 import com.weather.simpleweatherapp.presentation.ui.splash.SplashScreen
 
 @Composable
@@ -21,7 +22,7 @@ fun NavigationGraph(
 
         // 홈
         composable(NavRoute.Home.route) {
-
+            HomeScreen()
         }
     }
 }

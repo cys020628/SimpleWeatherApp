@@ -19,8 +19,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavigatorProvider
 import com.weather.simpleweatherapp.R
+import com.weather.simpleweatherapp.presentation.navigation.NavRoute
 import com.weather.simpleweatherapp.presentation.navigation.currentNavigator
 import kotlinx.coroutines.delay
 import timber.log.Timber
@@ -34,7 +34,7 @@ fun SplashScreen() {
     // 후에 날씨 데이터 및 위치 데이터 확인 및 다운로드 후 화면 이동 로직 작성
     LaunchedEffect(Unit) {
         delay(2000)
-        Timber.e("이동")
+        navigator.navigateTo(NavRoute.Home.route)
     }
 
     // 무한 회전 애니메이션 정의
